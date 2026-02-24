@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #f8fbff);
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #0d47a1;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.batch {
+    display: inline-block;
+    background: #0d47a1;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #1565c0;
+}
+
+/* Forms */
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 15px;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d47a1;
+}
+
+/* Result */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e3f2fd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Summary */
+.summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.summary-box {
+    background: #f4f6f9;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+}
+
+.summary-box span {
+    font-size: 14px;
+    color: #666;
+}
+
+.summary-box h3 {
+    margin: 10px 0 0;
+    font-size: 24px;
+}
+
+.summary-box.positive {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.summary-box.negative {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.summary-box.overall {
+    background: #e3f2fd;
+    color: #0d47a1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #666;
+    font-size: 14px;
+}

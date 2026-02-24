@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drug Review Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>💊 Drug Review Sentiment Analysis</h1>
+        <p class="subtitle">Deep Learning (LSTM) based Healthcare Feedback System</p>
+        <span class="batch">BATCH – 2</span>
+    </header>
+
+    <!-- Single Review Card -->
+    <div class="card">
+        <h2>📝 Analyze Single Drug Review</h2>
+        <form method="POST">
+            <textarea name="review_text" rows="5" placeholder="Enter patient drug review..." required></textarea>
+            <button type="submit">Predict Sentiment</button>
+        </form>
+
+        {% if sentiment %}
+        <div class="result">
+            <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+            <p><strong>Confidence:</strong> {{ confidence }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- CSV Upload Card -->
+    <div class="card">
+        <h2>📁 Upload Drug Reviews Dataset (CSV)</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Upload & Analyze</button>
+        </form>
+
+        {% if summary %}
+        <div class="summary">
+            <div class="summary-box">
+                <span>Total Reviews</span>
+                <h3>{{ summary["Total Reviews"] }}</h3>
+            </div>
+            <div class="summary-box positive">
+                <span>Positive</span>
+                <h3>{{ summary["Positive Reviews"] }}</h3>
+            </div>
+            <div class="summary-box negative">
+                <span>Negative</span>
+                <h3>{{ summary["Negative Reviews"] }}</h3>
+            </div>
+            <div class="summary-box overall">
+                <span>Overall Sentiment</span>
+                <h3>{{ summary["Overall Sentiment"] }}</h3>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        <p>Guided by B.Aswini Devi,Assistant Professor, Department of Artificial Intelligence and Machine Learning
+        |Final Year Project | Deep Learning Based Sentiment Analysis in Healthcare Applications</p>
+        
+
+    </footer>
+
+</div>
+
+</body>
+</html>
