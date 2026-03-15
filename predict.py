@@ -38,6 +38,9 @@ def predict_review(text):
 # ----------------------------
 # CSV PREDICTION + SUMMARY
 # ----------------------------
+# ----------------------------
+# CSV PREDICTION + SUMMARY
+# ----------------------------
 def predict_csv(csv_path):
     df = pd.read_csv(csv_path)
     df = df[['review']]
@@ -53,12 +56,19 @@ def predict_csv(csv_path):
     positive = sentiments.count("Positive")
     negative = sentiments.count("Negative")
 
+    # NEW LOGIC
+    if positive > negative:
+        overall = "Positive"
+    elif negative > positive:
+        overall = "Negative"
+    else:
+        overall = "Neutral"
+
     summary = {
         "Total Reviews": len(sentiments),
         "Positive Reviews": positive,
         "Negative Reviews": negative,
-        "Overall Sentiment": "Positive"
-        if positive >= negative else "Negative"
+        "Overall Sentiment": overall
     }
 
     return df, summary
