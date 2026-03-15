@@ -44,7 +44,7 @@ The deep learning model consists of:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 Deep-Learning-Sentiment-Analysis/
 │
@@ -63,18 +63,18 @@ Deep-Learning-Sentiment-Analysis/
 
 ## ⚙ Installation
 
-### 1️⃣ Clone the Repository
+### 1️ Clone the Repository
 
-git clone https://github.com/YOUR_USERNAME/Deep-Learning-Sentiment-Analysis.git  
+git clone https://github.com/phanikumar124/Deep-Learning-Sentiment-Analysis.git  
 cd Deep-Learning-Sentiment-Analysis  
 
-### 2️⃣ Install Dependencies
+### 2️ Install Dependencies
 
 pip install -r requirements.txt  
 
 ---
 
-## 🚀 Training the Model
+##  Training the Model
 
 Run the training script:
 
@@ -87,7 +87,7 @@ After training, the following files will be generated inside the `model/` direct
 
 ---
 
-## 🌐 Run the Web Application
+##  Run the Web Application
 
 Start the Flask application:
 
@@ -99,7 +99,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 📈 Example Prediction
+##  Example Prediction
 
 Input:  
 "I am very happy with this medicine."
@@ -110,7 +110,7 @@ Confidence: 0.91
 
 ---
 
-## 🧪 Dataset Information
+##  Dataset Information
 
 The model is trained on a drug review dataset containing:
 
@@ -123,7 +123,7 @@ Sentiment Labeling Rule:
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 - Add Attention Mechanism  
 - Increase Epochs for Better Accuracy  
@@ -133,7 +133,7 @@ Sentiment Labeling Rule:
 
 ---
 
-## 👨‍💻 Author
+##  Author
 Phani kumar,Koushik,Pavan Kalyan
 B.Tech – Artificial Intelligence & Machine Learning  
 
